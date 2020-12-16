@@ -1,0 +1,87 @@
+/* Components.css
+    Content:
+    Introduction: This file describe the components that make up the page. From internal layout to colors etc..
+        1. Sidebar
+            1.1. Sidebar search input field settings.
+            1.2. Sidebar contact settings. (The contact names right side effect settings there are js/app.js.).
+            1.3. Sidebar "Add new contact button".
+        2. Content
+            2.1. Content left
+            2.2. Content right
+                2.2.1. Input and textare design include the hoover effects.
+                2.2.2. Subscribe button design.
+        3. Footer
+*/
+
+/* 1. Sidebar */
+.sidebar{
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+
+/* 1.1. Sidebar search input field settings. */
+    .sidebar__search__wrapper{
+        display: flex;
+        margin-bottom: 0.9375rem;
+        padding: 0.9375rem;
+    }
+
+        .sidebar__search__input{
+            width: 100%;
+            background-color: #F4F3F5;
+            outline: none;
+            border: 0;
+            height: 3.125rem;
+        }
+            .sidebar__search__input::placeholder{
+                opacity: 0.25;
+                padding-left: 1.5rem;
+
+            }
+
+        .sidebar__search__icon{
+            height: 3.125rem;
+            background-color: #F4F3F5;
+            padding: 0.9375rem 0.9375rem 0.9375rem 0;
+            color: #211138;
+        }
+            .fa-search{
+                opacity: 0.25;
+            }
+
+/* 1.2. Sidebar contact settings. */
+.sidebar__members{
+    padding: 0.9375rem;
+}
+
+    .sidebar__members__images{
+            width: 3.125rem;
+            height: 3.125rem;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 0.9375rem;
+        }
+    
+    .sidebar__memebers__names{
+        color: #6200EA;
+    }
+
+/* 1.3. Sidebar "Add new contact button". */
+.button{
+    display: block;
+    width: 92.5%;
+    border: 2px solid #6200EA;
+    color: #6200EA;
+    border-radius: 1.5rem;
+    text-align: center;
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    font-size: 0.9375rem;
+}
+
+/* 2. Content */
+
+

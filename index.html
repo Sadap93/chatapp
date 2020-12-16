@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/app.js" defer></script>
     <title>Chatapp view</title>
 </head>
 <body>
@@ -23,48 +25,60 @@
             <div class="sidebar layout__item--width--25-percent layout__item--floated--left" >
 
                 <div class="sidebar__search__wrapper">
-                    <input type="text" placeholder="Search"/>
-                    <a href="#"><i class="fas fa-search"></i></a>
+                    <input class="sidebar__search__input" type="text" placeholder="Search"/>
+                    <a class="sidebar__search__icon" href="#"><i class="fas fa-search"></i></a>
                 </div>
 
 
-                <div class="sidebar__members">
-                    <img class="sidebar__members__images" src="assets/user_avatar_01.png" alt="member">
+                <div class="sidebar__members clearfix">
+                    <div class="sidebar__members__images__wrapper layout__item--floated--left">
+                        <img class="sidebar__members__images" src="assets/user_avatar_01.png" alt="member">
+                    </div>
                     <h6 class="sidebar__memebers__names">Amy Adams</h6>
                     <p class="sidebar__members__text">Lorem ipsum dolor sit amet, consetetur</p>
                 </div>
 
-                <div class="sidebar__members">
-                    <img class="sidebar__members__images" src="assets/user_avatar_02.png" alt="member">
+                <div class="sidebar__members clearfix">
+                    <div class="sidebar__members__images__wrapper layout__item--floated--left">
+                        <img class="sidebar__members__images" src="assets/user_avatar_02.png" alt="member">
+                    </div>
                     <h6 class="sidebar__memebers__names">Marc</h6>
                     <p class="sidebar__members__text">Set diam nonumy eirmod tempor invidunt</p>
                 </div>
 
-                <div class="sidebar__members">
-                    <img class="sidebar__members__images" src="assets/user_avatar_03.png" alt="member">
+                <div class="sidebar__members clearfix">
+                    <div class="sidebar__members__images__wrapper layout__item--floated--left">
+                        <img class="sidebar__members__images" src="assets/user_avatar_03.png" alt="member">
+                    </div>
                     <h6 class="sidebar__memebers__names">Jacob</h6>
                     <p class="sidebar__members__text"></p>
                 </div>
 
-                <div class="sidebar__members">
-                    <img class="sidebar__members__images" src="assets/user_avatar_04.png" alt="member">
+                <div class="sidebar__members clearfix">
+                    <div class="sidebar__members__images__wrapper layout__item--floated--left">
+                        <img class="sidebar__members__images" src="assets/user_avatar_04.png" alt="member">
+                    </div>
                     <h6 class="sidebar__memebers__names">Chris Smith</h6>
                     <p class="sidebar__members__text">At vero  eos et accusam et justo duo dolores</p>
                 </div>
 
-                <div class="sidebar__members">
-                    <img class="sidebar__members__images" src="assets/user_avatar_05.png" alt="member">
+                <div class="sidebar__members clearfix">
+                    <div class="sidebar__members__images__wrapper layout__item--floated--left">
+                        <img class="sidebar__members__images" src="assets/user_avatar_05.png" alt="member">
+                    </div>
                     <h6 class="sidebar__memebers__names">Mia Wong</h6>
                     <p class="sidebar__members__text">Stet clita kasd gubergren.</p>
                 </div>
 
-                <div class="sidebar__members">
-                    <img class="sidebar__members__images" src="assets/user_avatar_06.png" alt="member">
+                <div class="sidebar__members clearfix">
+                    <div class="sidebar__members__images__wrapper layout__item--floated--left">
+                        <img class="sidebar__members__images" src="assets/user_avatar_06.png" alt="member">
+                    </div>
                     <h6 class="sidebar__memebers__names">Jane</h6>
                     <p class="sidebar__members__text">Lorem ipsum dolor sit amet, consetetur</p>
                 </div>
 
-                <a class="button" href="#"></a>
+                <a class="button layout__item--centerized" href="#">Add new contact</a>
 
             </div><!--layout__item--width--25-percent.div-->
 
@@ -116,7 +130,7 @@
                 </div>
 
             </div><!--layout__item--width--75-percent.div-->
-11
+
         </div> <!--clearfix-->
 
     </div><!--layout.div-->
