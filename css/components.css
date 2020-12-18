@@ -93,13 +93,14 @@
 /* 2. Content */
 .content{
     background-color: #F4F3F5;
+    height: 100vh;
 }
 
 
 /* 2.1. Content Header. */
     .content__header{
         background-color: #6200EA;
-        height: 5rem;
+        height:  8.8888vh;
         display: flex;
         justify-content: space-between;
     }
@@ -132,8 +133,13 @@
 
 /* 2.2. Chat field. */
 .content__chat__wrapper{
-    margin-top: 2.5rem;
+    height:             75.5555vh;
+  overflow-y:         scroll; /* [1] */
+  scrollbar-width:    none; /* [2] */
+  -ms-overflow-style: none; /* [3] */
+  padding:            4.4444vh 3.75vw 6.6666vh 3.75vw;
 }
+    .content__chat__wrapper::-webkit-scrollbar { display: none; }
 
 
 /* 2.2.1. Chat partner's messages internal layout and avatar. */
@@ -172,6 +178,12 @@
         color: #B2ACBA;
         text-align: right;
     }
+        .typing-indicator{
+            margin-left: auto;
+            margin-right: 3.75rem;
+            color: #B2ACBA;
+            text-align: left; 
+        }
     
     .message{ position: relative;}
 
@@ -197,7 +209,53 @@
 
 
 /* 2.3. Input field. */
-.footer{
+
+.message-editor{
+  height:           15.5555vh;
+  padding:          2.2222vh 3.75vw 2.2222vh 1.25vw;
+  border-left:      .0625vw solid;
+  border-color:     #f4f3f5;
+  background-color: #ffffff;    
+}
+    .message-editor__form { position: relative; }
+
+        .message-editor__textarea {
+        position:         absolute;
+        width:            66.25vw;
+        height:           11.1111vh;
+        padding:          2.2222vh 0 1.4444vh 1.5vw;
+        border:           0;
+        border-bottom:    .3333vh solid;
+        border-color:     transparent;
+        margin-bottom:    1.6666vh;
+        background-color: #f4f3f5;
+        outline:          none;
+        resize: none;
+        }
+
+            .message-editor__textarea:focus { border-bottom-color: #6200ea; }
+
+            .message-editor__textarea::placeholder {
+            font-weight: bold;
+            opacity:     .25;
+            }
+
+            .message-editor__attachment:visited { color: #211138; }
+
+    .message-editor__send-button {
+    position:       absolute;
+    right:          0;
+    margin-right:   0;
+    width:          5.5555vh;
+    height:         5.5555vh;
+    border-radius:  50%;
+    text-align:     center;
+    border:           0;
+    background-color: #6200ea;
+    color:            #ffffff;
+    }
+
+/* .footer{
     background-color: #FFFFFF;
     padding: 20px 120px 20px 20px;
 }
@@ -242,5 +300,5 @@
         padding: 10px;
         background-color: #6200EA;
         border-radius: 50%;
-    }
+    } */
     
