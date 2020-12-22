@@ -1,5 +1,5 @@
 let membersArray=document.querySelectorAll(".sidebar__members")
-
+  
 
 var currentTime = new Date(); 
 var timeStamp = currentTime.getHours() + ":"  //current time//
@@ -65,13 +65,13 @@ let member6= {
 
 let objectArray=[member1,member2,member3,member4,member5,member6]
 let j=0
-
-
+$(".content__header__amy").append(objectArray[0].name);
+$(".content__chat__wrapper").append(objectArray[0].name,objectArray[0].picture,objectArray[0].message);
+$(membersArray[0]).css({"border-left": "5px solid #6200EA", "padding-left": "10px"});
 function main(){
     
     
-    // $(".content__chat__wrapper").append(objectArray[0].name,objectArray[0].picture,objectArray[0].message);
-    // $(membersArray[0]).css({"border-left": "5px solid #6200EA", "padding-left": "10px"});
+ 
     
     
     for(let i=0; i<membersArray.length;i++){  
@@ -103,9 +103,11 @@ myDiv.animate({ scrollTop: myDiv.prop("scrollHeight") - 1 }, 300);
 
 $(".sidebar__members").click(function(){
     $(".sidebar__members").addClass("selected")
-    $(".sidebar__members").css({"border-left":"0","padding-left": "15px"})
-    $(this).closest(".selected").css({"border-left": "5px solid #6200EA", "padding-left": "10px"})
+    $(".sidebar__members").css({"border-left":"0","padding-left": "15px","background":"none"})
+    $(this).closest(".selected").css({"border-left": "5px solid #6200EA", "padding-left": "10px","background":"rgba(213, 184, 255, 1)"})
     
+    $(".content__header__amy").empty();
+    $(".content__header__amy").append(objectArray[j].name);
     
     
 });
@@ -121,6 +123,7 @@ $(".send-button").click(function () {
     if(sendMessage==""){}
     else{
         
+       
         let typingIndicator="<h6 class="+"typing-indicator"+">"+objectArray[j].name+" is typing...</h6>"
         $(".content__chat__wrapper").append('<h6 class="content__chat__metadata--student">'+timeStamp+'</h6>'
         +'<div class="clearfix message"> <p class="content__chat__message--student short-message layout__item--floated--right">'
@@ -150,28 +153,37 @@ main();
 
 $(".button").click(function(){
     
-    $(".sidebar__members_wrapper").append( '<div class="sidebar__members clearfix">'+
-    '<div class="sidebar__members__images__wrapper layout__item--floated--left">'+
-    '<img class="sidebar__members__images" src="assets/user_avatar_06.png" alt="member">'+
-    '</div>'+
-    '<h6 class="sidebar__memebers__names">Józsi</h6>'+
-    '<p class="sidebar__members__text">Józsiskodok</p>'+
-    '</div>');
+    $(".sidebar__members_wrapper").append('<div class="sidebar__members clearfix">'+
+                                                '<div class="sidebar__members__images__wrapper layout__item--floated--left">'+
+                                                    '<img class="sidebar__members__images" src="assets/new_user_avatar.png" alt="member">'+
+                                                '</div>'+
+                                                '<h6 class="sidebar__memebers__names">'+'<input class="input-name" placeholder="Your friends name"></input>'+
+                                                '<button class="add-new-name">Add</button></h6>'+
+                                                '<p class="sidebar__members__text"></p>'+
+                                          '</div>');
 
-    console.log(membersArray.length);
-
-
-    
-    let member7= {
-        name: 'Józsi',
-        picture: '<img class="content__chat__image--amy" src="assets/user_avatar_06.png" alt="amy">',
-        message: 
-        '<div class="clearfix">'
-        + '<p class="content__chat__message--amy"> Szia, Józsi vagyok!</p>' + ' </div>'
+    $(".add-new-name").click(function(){
+        let newName = $(".input-name").val();
+        $(this).closest(".sidebar__memebers__names").append(newName);
+        $(".input-name").remove();
+        $(".add-new-name").remove();
         
-    }
-
-    objectArray.push(member7);
+        
+        let newmember= {
+            name: newName,
+            picture: '<img class="content__chat__image--amy" src="assets/new_user_avatar.png" alt="amy">',
+            message: 
+            '<div class="clearfix">'
+            + '<p class="content__chat__message--amy"> Szia '+newName+' vagyok!</p>' + ' </div>'
+            
+        }
+        
+        
+      
+        
+        objectArray.push(newmember);
+        console.log(objectArray);
+    });
     membersArray=document.querySelectorAll(".sidebar__members");
   
     
